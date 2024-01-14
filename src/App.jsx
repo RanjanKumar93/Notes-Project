@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import noteService from "./services/notes";
 import Note from "./components/Note";
 
-alert("Run dbou.json on port 3001");
+alert("Run db.json on port 3001");
 
 const Footer = () => {
   const footerStyle = {
@@ -24,7 +24,7 @@ function App() {
   const [notes, setNotes] = useState(null);
   const [newNote, setNewNote] = useState("");
   const [showAll, setShowAll] = useState(false);
-  
+
   useEffect(() => {
     noteService.getAll().then((initialNotes) => {
       setNotes(initialNotes);
